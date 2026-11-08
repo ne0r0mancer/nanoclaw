@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.nanoclaw.tasks-ui</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>{{NODE_PATH}}</string>
+    <string>{{PROJECT_ROOT}}/scripts/tasks-ui.mjs</string>
+  </array>
+  <key>WorkingDirectory</key><string>{{PROJECT_ROOT}}</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>HOST</key><string>{{TASKS_UI_HOST}}</string>
+    <key>PORT</key><string>8100</string>
+    <key>TZ</key><string>Europe/Paris</string>
+  </dict>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>ThrottleInterval</key><integer>15</integer>
+  <key>StandardOutPath</key><string>{{PROJECT_ROOT}}/logs/tasks-ui.log</string>
+  <key>StandardErrorPath</key><string>{{PROJECT_ROOT}}/logs/tasks-ui.error.log</string>
+</dict>
+</plist>
